@@ -23,6 +23,7 @@ struct ContentView: View {
                 BigView(titlebg: "checkone", smallTitle: "check2")
                 BigView(titlebg: "newbook", smallTitle: "blah blah")
             }
+           
             BigView(titlebg: "checkone", smallTitle: "check2")
             
             
