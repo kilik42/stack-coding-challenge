@@ -7,12 +7,14 @@
 
 import SwiftUI
 struct topView: View {
+    var titlebg: String
+    var smallTitle: String
     var body: some View {
         VStack(alignment:.leading) {
-            Text("Hobbies")
+            Text(titlebg)
                 .padding(0)
                 .font(.largeTitle)
-            Text("The quest for a balanced life")
+            Text(smallTitle)
                 .font(.subheadline)
                 
         }
@@ -24,6 +26,6 @@ struct topView: View {
 
 struct topView_Previews: PreviewProvider {
     static var previews: some View {
-        topView()
+        topView(titlebg: "Hobbies", smallTitle: "the quest for a balanced life")
     }
 }

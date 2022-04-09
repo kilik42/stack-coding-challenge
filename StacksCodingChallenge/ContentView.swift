@@ -10,18 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-           
-                topView()
+            HStack{
+                topView(titlebg: "Hobbies", smallTitle: "the quest for a balanced life")
                 Spacer()
+//                Rectangle()
+            }
+                
            
             
 //            Spacer()
             HStack{
-                BigView()
-                BigView()
+                BigView(titlebg: "checkone", smallTitle: "check2")
+                BigView(titlebg: "newbook", smallTitle: "blah blah")
             }
-            BigView()
-                
+            BigView(titlebg: "checkone", smallTitle: "check2")
             
             
             
@@ -32,12 +34,17 @@ struct ContentView: View {
 }
 
 struct BigView: View {
+    
+    let titlebg:String
+    let smallTitle: String
+    
     var body: some View {
+        
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 5, content: {
             
             
             ZStack {
-                RoundedRectangle(cornerRadius: 25)
+                RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.blue)
                 VStack{
                     Image(systemName: "book.closed")
@@ -46,7 +53,7 @@ struct BigView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width:70)
                     
-                    topView()
+                    topView(titlebg: titlebg, smallTitle: smallTitle)
                 }
                 
             }
