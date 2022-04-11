@@ -20,7 +20,7 @@ struct ContentView: View {
             
 //            Spacer()
             HStack{
-                BigView(titlebg: "checkone", smallTitle: "check2",image: "book.closed")
+                BigView(titlebg: "Books", smallTitle: "read, listen, enjoy",image: "book.closed")
                 BigView(titlebg: "music", smallTitle: "listen, sing,dance",image: "music.note")
             }
            
@@ -56,6 +56,7 @@ struct BigView: View {
                         .padding(30)
                     topView(titlebg: titlebg, smallTitle:
                                 smallTitle)
+                        .padding()
                 }
                 
             }
