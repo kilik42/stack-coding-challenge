@@ -20,11 +20,11 @@ struct ContentView: View {
             
 //            Spacer()
             HStack{
-                BigView(titlebg: "checkone", smallTitle: "check2")
-                BigView(titlebg: "newbook", smallTitle: "blah blah")
+                BigView(titlebg: "checkone", smallTitle: "check2",image: "book.closed")
+                BigView(titlebg: "music", smallTitle: "listen, sing,dance",image: "music.note")
             }
            
-            BigView(titlebg: "checkone", smallTitle: "check2")
+            BigView(titlebg: "programming", smallTitle: "image, share, listen",image: "laptopcomputer")
             
             
             
@@ -38,7 +38,7 @@ struct BigView: View {
     
     let titlebg:String
     let smallTitle: String
-    
+    let image: String
     var body: some View {
         
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 5, content: {
@@ -48,13 +48,14 @@ struct BigView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.blue)
                 VStack{
-                    Image(systemName: "book.closed")
+                    Image(systemName: image)
                         .resizable()
                         .scaledToFit()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width:70)
-                    
-                    topView(titlebg: titlebg, smallTitle: smallTitle)
+                        .frame(width:50)
+                        .padding(30)
+                    topView(titlebg: titlebg, smallTitle:
+                                smallTitle)
                 }
                 
             }

@@ -14,6 +14,7 @@ struct topView: View {
             Text(titlebg)
                 .padding(0)
                 .font(.largeTitle)
+                .padding(.bottom, 2)
             Text(smallTitle)
                 .font(.subheadline)
                 
