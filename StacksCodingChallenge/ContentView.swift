@@ -12,6 +12,7 @@ struct ContentView: View {
         VStack {
             HStack{
                 topView(titlebg: "Hobbies", smallTitle: "the quest for a balanced life")
+//                    .padding(.left)
                 Spacer()
 //                Rectangle()
             }
