@@ -48,7 +48,15 @@ struct BigView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.blue)
+               
                 VStack{
+                    HStack{
+                        Spacer()
+                        
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.red)
+                        
+                    }
                     Image(systemName: image)
                         .resizable()
                         .scaledToFit()
