@@ -40,6 +40,7 @@ struct BigView: View {
     let titlebg:String
     let smallTitle: String
     let image: String
+    @State var changeColor =  false
     var body: some View {
         
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 5, content: {
@@ -53,8 +54,23 @@ struct BigView: View {
                     HStack{
                         Spacer()
                         
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.red)
+                        VStack{
+                            Button(action:{
+                                self.changeColor.toggle()
+                            }){
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(.red)
+                                    .padding()
+                            }
+                            if changeColor{
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(.blue)
+                                    .padding()
+                            }
+                            
+                           
+                            Spacer()
+                        }
                         
                     }
                     Image(systemName: image)
