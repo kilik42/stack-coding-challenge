@@ -65,7 +65,7 @@ struct BigView: View {
                             if changeColor{
                                 Image(systemName: "heart.fill")
                                     .foregroundColor(.blue)
-                                    .padding()
+//                                    .padding()
                             }
                             
                            
